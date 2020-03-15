@@ -1,0 +1,24 @@
+{
+    "homepage": "https://sakura-editor.github.io/",
+    "description": "A free Japanese text editor for Windows.",
+    "license": "zlib",
+    "version": "2.3.2.0",
+    "url": "https://github.com/sakura-editor/sakura/releases/download/v2.3.2.0/sakura2-3-2-0.zip",
+    "hash": "f767b65096c96decb1540a7b95ef07b8dc77e08732d8af12a3fdc84e4137f2b0",
+    "extract_dir": "sakura2-3-2-0",
+    "bin": "sakura.exe",
+    "shortcuts": [
+        [
+            "sakura.exe",
+            "Sakura Editor"
+        ]
+    ],
+    "post_install": "Expand-Archive \"$dir\\QuickStartV2.zip\" \"$dir\" -Force",
+    "checkver": {
+        "github": "https://github.com/sakura-editor/sakura"
+    },
+    "autoupdate": {
+        "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura$dashVersion.zip",
+        "extract_dir": "sakura$dashVersion"
+    }
+}
