@@ -2,9 +2,9 @@
     "homepage": "https://github.com/koron/vim-kaoriya",
     "description": "Vim text editor. (KaoriYa version)",
     "version": "8.2.0087.20200106",
-    "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.2.0087-20200106/vim82-kaoriya-win32-8.2.0087-20200106.zip",
-    "hash": "2df13a581b0011bf991172970552e23f070afe740661f01220c6bf098e8c9c35",
-    "extract_dir": "vim82-kaoriya-win32",
+    "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.2.0087-20200106/vim82-kaoriya-win64-8.2.0087-20200106.zip",
+    "hash": "f83070019d2cd0128f49cdc5bc49985076e3a45f502a443cf24278dee083a339",
+    "extract_dir": "vim82-kaoriya-win64",
     "bin": [
         "vim.exe",
         [
@@ -42,11 +42,11 @@
     ],
     "checkver": {
         "url": "https://github.com/koron/vim-kaoriya/releases/latest",
-        "re": "vim(?<s>[\\d]+)-kaoriya-win64-(?<v>[\\d]+.[\\d]+.[\\d]+)-(?<d>[\\d]{8}).zip",
-        "replace": "${v}.${d}"
+        "re": "vim(?<short>[\\d]+)-kaoriya-win64-(?<code>[\\d.]+)-(?<date>[\\d]{8}).zip",
+        "replace": "${code}.${date}"
     },
     "autoupdate": {
-        "url": "https://github.com/koron/vim-kaoriya/releases/download/v$matchV-$matchD/vim$matchS-kaoriya-win64-$matchV-$matchD.zip",
-        "extract_dir": "vim$matchS-kaoriya-win64"
+        "url": "https://github.com/koron/vim-kaoriya/releases/download/v$matchCode-$matchDate/vim$matchShort-kaoriya-win64-$matchCode-$matchDate.zip",
+        "extract_dir": "vim$matchShort-kaoriya-win64"
     }
 }
