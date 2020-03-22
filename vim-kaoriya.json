@@ -2,9 +2,25 @@
     "homepage": "https://github.com/koron/vim-kaoriya",
     "description": "Vim text editor. (KaoriYa version)",
     "version": "8.2.0087.20200106",
-    "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.2.0087-20200106/vim82-kaoriya-win64-8.2.0087-20200106.zip",
-    "hash": "f83070019d2cd0128f49cdc5bc49985076e3a45f502a443cf24278dee083a339",
+    "url": [
+        "https://github.com/koron/vim-kaoriya/releases/download/v8.2.0087-20200106/vim82-kaoriya-win64-8.2.0087-20200106.zip",
+        "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/vim-kaoriya-install-context.reg",
+        "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/vim-kaoriya-uninstall-context.reg"
+    ],
+    "hash": [
+        "f83070019d2cd0128f49cdc5bc49985076e3a45f502a443cf24278dee083a339",
+        "1f6e6c98663574dd7cf15baed46a153e4e371ec2455fe9d1c44bd2bab87c637c",
+        "484e478631c64b871d7dde799f9c6644ccb84f88e7a51bae925a04c490a08ea1"
+    ],
     "extract_dir": "vim82-kaoriya-win64",
+    "pre_install": [
+        "'vim-kaoriya-install-context.reg', 'vim-kaoriya-uninstall-context.reg' | ForEach-Object {",
+        "    $vimpath = \"$(current_dir $dir)\\gvim.exe\".Replace('\\', '\\\\')",
+        "    $content = (Get-Content \"$dir\\$_\").Replace('$vim', $vimpath)",
+        "    if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
+        "    Set-Content \"$dir\\$_\" $content",
+        "}"
+    ],
     "bin": [
         "vim.exe",
         [

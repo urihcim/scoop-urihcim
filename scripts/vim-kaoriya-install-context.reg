@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\*\shell\Open with &GVim]
+@="Open with &GVim"
+"Icon"="$vim"
+[HKEY_CURRENT_USER\Software\Classes\*\shell\Open with &GVim\command]
+@="\"$vim\" --remote-tab-silent \"%1\""
