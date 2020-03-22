@@ -9,8 +9,8 @@
     ],
     "hash": [
         "f83070019d2cd0128f49cdc5bc49985076e3a45f502a443cf24278dee083a339",
-        "1f6e6c98663574dd7cf15baed46a153e4e371ec2455fe9d1c44bd2bab87c637c",
-        "484e478631c64b871d7dde799f9c6644ccb84f88e7a51bae925a04c490a08ea1"
+        "e9a95e2daefbc3b8dc91324fabd5dd7e949ed07f70edb9d3926029b71105ddc4",
+        "e9afbdf2080f271dd07c8916bba34d12cc03157b327879f2551d938c1f00c68a"
     ],
     "extract_dir": "vim82-kaoriya-win64",
     "pre_install": [
