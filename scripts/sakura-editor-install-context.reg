@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\*\shell\Open with &Sakura Editor]
+@="Open with &Sakura Editor"
+"Icon"="$sakura"
+[HKEY_CURRENT_USER\Software\Classes\*\shell\Open with &Sakura Editor\command]
+@="\"$sakura\" \"%1\""
