@@ -8,6 +8,7 @@
     "architecture": {
         "64bit": {
             "bin": [
+                "TE64.exe",
                 [
                     "TE64.exe",
                     "TE"
