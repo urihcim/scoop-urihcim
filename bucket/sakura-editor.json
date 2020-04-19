@@ -2,25 +2,30 @@
     "homepage": "https://sakura-editor.github.io/",
     "description": "A free Japanese text editor for Windows.",
     "license": "zlib",
-    "version": "2.3.2.0",
+    "version": "2.4.0",
     "url": [
-        "https://github.com/sakura-editor/sakura/releases/download/v2.3.2.0/sakura2-3-2-0.zip",
+        "https://github.com/sakura-editor/sakura/releases/download/v2.4.0/sakura-tag-v2.4.0-build2686-782347a-Win32-Release-Exe.zip",
         "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/sakura-editor-install-context.reg",
         "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/sakura-editor-uninstall-context.reg"
     ],
     "hash": [
-        "f767b65096c96decb1540a7b95ef07b8dc77e08732d8af12a3fdc84e4137f2b0",
+        "md5:c0ddc087c691b23b7ed1b21c1a14b5c0",
         "b021a27739fc7e6fa0c688851e632a569ce1ac8249961e9bad0d3c7ca3ca18b6",
         "0ee754f71b5062f4eca02ee6c69eb1a633de1f36532ff4cfb0985817699b6ce3"
     ],
-    "extract_dir": "sakura2-3-2-0",
     "pre_install": [
         "'sakura-editor-install-context.reg', 'sakura-editor-uninstall-context.reg' | ForEach-Object {",
         "    $sakurapath = \"$(current_dir $dir)\\sakura.exe\".Replace('\\', '\\\\')",
         "    $content = (Get-Content \"$dir\\$_\").Replace('$sakura', $sakurapath)",
         "    if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
         "    Set-Content \"$dir\\$_\" $content",
-        "}"
+        "}",
+        "@\"",
+        "[Settings]",
+        "MultiUser=1",
+        "UserRootFolder=0",
+        "UserSubFolder=sakura",
+        "\"@ | Out-File \"$dir\\sakura.exe.ini\""
     ],
     "bin": "sakura.exe",
     "shortcuts": [
@@ -29,12 +34,15 @@
             "Sakura Editor"
         ]
     ],
-    "post_install": "Expand-Archive \"$dir\\QuickStartV2.zip\" \"$dir\" -Force",
     "checkver": {
-        "github": "https://github.com/sakura-editor/sakura"
+        "github": "https://github.com/sakura-editor/sakura",
+        "re": "(?<file>sakura-tag-v(?<version>[\\d.]+)-.*-Exe.zip)"
     },
     "autoupdate": {
-        "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura$dashVersion.zip",
-        "extract_dir": "sakura$dashVersion"
+        "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/$matchFile",
+        "hash": {
+            "url": "$url.md5",
+            "find": "$md5"
+        }
     }
 }
