@@ -2,14 +2,14 @@
     "homepage": "https://sakura-editor.github.io/",
     "description": "A free Japanese text editor for Windows.",
     "license": "zlib",
-    "version": "2.4.0",
+    "version": "2.4.1",
     "url": [
-        "https://github.com/sakura-editor/sakura/releases/download/v2.4.0/sakura-tag-v2.4.0-build2686-782347a-Win32-Release-Exe.zip",
+        "https://github.com/sakura-editor/sakura/releases/download/v2.4.1/sakura-tag-v2.4.1-build2849-ee8234f-Win32-Release-Exe.zip",
         "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/sakura-editor-install-context.reg",
         "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/sakura-editor-uninstall-context.reg"
     ],
     "hash": [
-        "md5:c0ddc087c691b23b7ed1b21c1a14b5c0",
+        "md5:dcef1d95bd7aaeeb39c7fbba57d650b7",
         "b021a27739fc7e6fa0c688851e632a569ce1ac8249961e9bad0d3c7ca3ca18b6",
         "0ee754f71b5062f4eca02ee6c69eb1a633de1f36532ff4cfb0985817699b6ce3"
     ],
