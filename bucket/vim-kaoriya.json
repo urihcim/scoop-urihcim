@@ -1,14 +1,14 @@
 {
     "homepage": "https://github.com/koron/vim-kaoriya",
     "description": "Vim text editor. (KaoriYa version)",
-    "version": "8.2.0087.20200106",
+    "version": "8.2.1233.20200718",
     "url": [
-        "https://github.com/koron/vim-kaoriya/releases/download/v8.2.0087-20200106/vim82-kaoriya-win64-8.2.0087-20200106.zip",
+        "https://github.com/koron/vim-kaoriya/releases/download/v8.2.1233-20200718/vim82-kaoriya-win64-8.2.1233-20200718.zip",
         "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/vim-kaoriya-install-context.reg",
         "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/vim-kaoriya-uninstall-context.reg"
     ],
     "hash": [
-        "f83070019d2cd0128f49cdc5bc49985076e3a45f502a443cf24278dee083a339",
+        "bca5ea4a27e7247bee57abf729ca8420a56adf9b1e5e97be572c3cccd559118a",
         "e9a95e2daefbc3b8dc91324fabd5dd7e949ed07f70edb9d3926029b71105ddc4",
         "e9afbdf2080f271dd07c8916bba34d12cc03157b327879f2551d938c1f00c68a"
     ],
