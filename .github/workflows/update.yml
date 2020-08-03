@@ -1,15 +1,18 @@
+name: Update buckets
 on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
-
 jobs:
   update:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
     - uses: Geertvdc/setup-hub@v1.0.0
-    - name: auto-pr
+    - name: Install scoop
+      shell: powershell
+      run: iwr -useb get.scoop.sh | iex
+    - name: Run auto-pr
       shell: powershell
       env:
         GITHUB_USER: ${{ secrets.GITHUB_USER }}
