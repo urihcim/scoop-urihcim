@@ -1,0 +1,17 @@
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: Geertvdc/setup-hub@v1.0.0
+    - name: auto-pr
+      shell: powershell
+      env:
+        GITHUB_USER: ${{ secrets.GITHUB_USER }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: bin/auto-pr.ps1
