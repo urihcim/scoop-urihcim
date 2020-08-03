@@ -9,12 +9,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: Geertvdc/setup-hub@v1.0.0
-    - name: Install scoop
-      shell: powershell
-      run: iwr -useb get.scoop.sh | iex
     - name: Run auto-pr
       shell: powershell
       env:
         GITHUB_USER: ${{ secrets.GITHUB_USER }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: bin/auto-pr.ps1
+      run: |
+        iwr -useb get.scoop.sh | iex
+        bin/auto-pr.ps1
