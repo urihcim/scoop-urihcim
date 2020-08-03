@@ -16,4 +16,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         iwr -useb get.scoop.sh | iex
-        bin/auto-pr.ps1
+        bin/auto-pr.ps1 -p
