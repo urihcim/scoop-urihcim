@@ -11,7 +11,7 @@ jobs:
     - name: Run auto-pr
       shell: powershell
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
       run: |
         iwr -useb get.scoop.sh | iex
         $ErrorActionPreference = 'Continue'
