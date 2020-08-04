@@ -15,6 +15,6 @@ jobs:
         USER: ${{ github.actor }}
       run: |
         iwr -useb get.scoop.sh | iex
-        git config user.user "$USER"
+        git config user.name "$USER"
         $ErrorActionPreference = 'Continue'
         bin/auto-pr -p
