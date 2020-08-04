@@ -12,9 +12,11 @@ jobs:
       shell: powershell
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        EMAIL: ${{ secrets.EMAIL }}
         USER: ${{ github.actor }}
       run: |
         iwr -useb get.scoop.sh | iex
+        git config user.email "$EMAIL"
         git config user.name "$USER"
         $ErrorActionPreference = 'Continue'
         bin/auto-pr -p
