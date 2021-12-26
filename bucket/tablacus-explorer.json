@@ -1,10 +1,10 @@
 {
     "homepage": "https://tablacus.github.io/explorer.html",
     "description": "Tablacus Explorer is a tabbed file manager with add-on support.",
-    "version": "21.12.22",
+    "version": "21.12.24",
     "license": "MIT",
-    "url": "https://github.com/tablacus/TablacusExplorer/releases/download/21.12.22/te211222.zip",
-    "hash": "4a987cb916b3e26584080077d1fb6c407a4aa56b81e634dec4f522a5920b3699",
+    "url": "https://github.com/tablacus/TablacusExplorer/releases/download/21.12.24/te211224.zip",
+    "hash": "9a6681a161b0aa0288fbf57d97ba701e32642081ce3fc7f458c3a26d4fb762d5",
     "architecture": {
         "64bit": {
             "bin": [
