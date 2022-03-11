@@ -4,19 +4,13 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 jobs:
-  update:
+  excavate:
+    name: Excavator
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Run auto-pr
-      shell: powershell
+    - uses: actions/checkout@main
+    - name: Excavator
+      uses: ScoopInstaller/Scoop-GithubActions@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        EMAIL: ${{ secrets.EMAIL }}
-        USER: ${{ github.actor }}
-      run: |
-        iwr -useb get.scoop.sh | iex
-        git config user.email "$EMAIL"
-        git config user.name "$USER"
-        $ErrorActionPreference = 'Continue'
-        bin/auto-pr -p
+        USER_EMAIL: ${{ secrets.EMAIL }}
