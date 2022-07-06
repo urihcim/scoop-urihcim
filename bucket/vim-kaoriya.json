@@ -1,13 +1,10 @@
 {
-    "homepage": "https://github.com/koron/vim-kaoriya",
-    "description": "Vim text editor. (KaoriYa version)",
     "version": "8.2.1287.20200724",
-    "url": [
-        "https://github.com/koron/vim-kaoriya/releases/download/v8.2.1287-20200724/vim82-kaoriya-win64-8.2.1287-20200724.zip"
-    ],
-    "hash": [
-        "72e9035943a4fd437c453bd089bc23dd8c440e401735334c0cbe51d5b9e418a0"
-    ],
+    "description": "Vim text editor. (KaoriYa version)",
+    "homepage": "https://github.com/koron/vim-kaoriya",
+    "license": "Vim",
+    "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.2.1287-20200724/vim82-kaoriya-win64-8.2.1287-20200724.zip",
+    "hash": "72e9035943a4fd437c453bd089bc23dd8c440e401735334c0cbe51d5b9e418a0",
     "extract_dir": "vim82-kaoriya-win64",
     "post_install": [
         "if ($bucket) {",
