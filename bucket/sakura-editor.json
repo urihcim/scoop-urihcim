@@ -1,22 +1,19 @@
 {
-    "homepage": "https://sakura-editor.github.io/",
-    "description": "A free Japanese text editor for Windows.",
-    "license": "zlib",
     "version": "2.4.1",
-    "url": [
-        "https://github.com/sakura-editor/sakura/releases/download/v2.4.1/sakura-tag-v2.4.1-build2849-ee8234f-Win32-Release-Exe.zip",
-        "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/sakura-editor-install-context.reg",
-        "https://raw.githubusercontent.com/urihcim/scoop-urihcim/master/scripts/sakura-editor-uninstall-context.reg"
-    ],
-    "hash": [
-        "md5:dcef1d95bd7aaeeb39c7fbba57d650b7",
-        "b021a27739fc7e6fa0c688851e632a569ce1ac8249961e9bad0d3c7ca3ca18b6",
-        "0ee754f71b5062f4eca02ee6c69eb1a633de1f36532ff4cfb0985817699b6ce3"
-    ],
-    "pre_install": [
-        "'sakura-editor-install-context.reg', 'sakura-editor-uninstall-context.reg' | ForEach-Object {",
-        "    $sakurapath = \"$(current_dir $dir)\\sakura.exe\".Replace('\\', '\\\\')",
-        "    $content = (Get-Content \"$dir\\$_\").Replace('$sakura', $sakurapath)",
+    "description": "A free Japanese text editor for Windows.",
+    "homepage": "https://sakura-editor.github.io/",
+    "license": "zlib",
+    "url": "https://github.com/sakura-editor/sakura/releases/download/v2.4.1/sakura-tag-v2.4.1-build2849-ee8234f-Win32-Release-Exe.zip",
+    "hash": "md5:dcef1d95bd7aaeeb39c7fbba57d650b7",
+    "post_install": [
+        "if ($bucket) {",
+        "    $scriptsdir = \"$bucketsdir\\$bucket\\scripts\"",
+        "} else {",
+        "    $scriptsdir = \"$(Split-Path $(Split-Path $url -Parent) -Parent)\\scripts\"",
+        "}",
+        "'install-context.reg', 'uninstall-context.reg' | ForEach-Object {",
+        "    $sakurapath = \"$dir\\sakura.exe\".Replace('\\', '\\\\')",
+        "    $content = (Get-Content \"$scriptsdir\\sakura-editor\\$_\").Replace('$sakura', $sakurapath)",
         "    if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
         "    Set-Content \"$dir\\$_\" $content",
         "}",
