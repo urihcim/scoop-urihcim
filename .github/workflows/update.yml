@@ -1,4 +1,4 @@
-name: Update buckets
+name: Update bucket
 on:
   schedule:
     - cron: '0 0 * * *'
