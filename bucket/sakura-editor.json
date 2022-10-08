@@ -33,7 +33,7 @@
     ],
     "checkver": {
         "github": "https://github.com/sakura-editor/sakura",
-        "re": "(?<file>sakura-tag-v(?<version>[\\d.]+)-.*-Exe.zip)"
+        "regex": "(?<file>sakura-tag-v(?<version>[\\d.]+)-[\\w-]*-Exe\\.zip)"
     },
     "autoupdate": {
         "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/$matchFile",

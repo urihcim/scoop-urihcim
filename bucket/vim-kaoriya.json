@@ -55,12 +55,12 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/koron/vim-kaoriya/releases/latest",
-        "re": "vim(?<short>[\\d]+)-kaoriya-win64-(?<code>[\\d.]+)-(?<date>[\\d]{8}).zip",
+        "github": "https://github.com/koron/vim-kaoriya",
+        "regex": "(?<file>vim(?<short>[\\d]+)-kaoriya-win64-(?<code>[\\d.]+)-(?<date>[\\d]{8})\\.zip)",
         "replace": "${code}.${date}"
     },
     "autoupdate": {
-        "url": "https://github.com/koron/vim-kaoriya/releases/download/v$matchCode-$matchDate/vim$matchShort-kaoriya-win64-$matchCode-$matchDate.zip",
+        "url": "https://github.com/koron/vim-kaoriya/releases/download/v$matchCode-$matchDate/$matchFile",
         "extract_dir": "vim$matchShort-kaoriya-win64"
     }
 }
