@@ -9,7 +9,6 @@
     "bin": "nkf.exe",
     "checkver": "github",
     "autoupdate": {
-	"url": "https://github.com/kkato233/nkf/releases/download/v$version/nkf_$version.zip"
+        "url": "https://github.com/kkato233/nkf/releases/download/v$version/nkf_$version.zip"
     }
 }
-
