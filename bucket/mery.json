@@ -1,10 +1,10 @@
 {
-    "version": "3.6.0",
+    "version": "3.6.1",
     "description": "A free Japanese text editor for Windows.",
     "homepage": "https://www.haijin-boys.com/wiki/",
     "license": "zlib",
-    "url": "http://www.haijin-boys.com/download/MeryPortable-x64-3.6.0.zip",
-    "hash": "4312f1ac687690ee476d089950c50ff3daa7d553d4f3d9b0c7f37df1ee9c4400",
+    "url": "http://www.haijin-boys.com/download/MeryPortable-x64-3.6.1.zip",
+    "hash": "7163291099e6cc0a962866fb31c1a54815792d51cbc9e6593f4957bdbe443793",
     "extract_dir": "Mery",
     "pre_install": [
         "$manifest.persist | ForEach-Object {",
