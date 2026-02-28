@@ -22,7 +22,6 @@
         "    Copy-Item \"$dir\\example\\tutorial.janet\" \"$dir\\jwno-config.janet\" -ErrorAction SilentlyContinue | Out-Null",
         "}"
     ],
-    "persist": "jwno-config.janet",
     "bin": "jwno.exe",
     "shortcuts": [
         [
@@ -30,6 +29,7 @@
             "Jwno"
         ]
     ],
+    "persist": "jwno-config.janet",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
