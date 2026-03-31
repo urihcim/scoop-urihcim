@@ -8,9 +8,9 @@ jobs:
     name: Excavator
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     - name: Excavator
-      uses: ScoopInstaller/Scoop-GithubActions@main
+      uses: ScoopInstaller/Scoop-GithubActions@31b5ce6220ad5bad5fb5f814508fc7247f2d0163
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         USER_EMAIL: ${{ secrets.EMAIL }}
