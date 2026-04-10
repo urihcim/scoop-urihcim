@@ -28,7 +28,7 @@
     ],
     "checkver": {
         "url": "https://www.haijin-boys.com/software/mery",
-        "re": "Ver ([\\d.]+)"
+        "regex": "Mery.*(?:Ver |v)([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
