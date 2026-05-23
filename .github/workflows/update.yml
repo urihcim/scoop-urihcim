@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     - name: Excavator
-      uses: ScoopInstaller/Scoop-GithubActions@63f20efd5d6f876b16fbe2bc95428821b6051c0e
+      uses: ScoopInstaller/Scoop-GithubActions@e174c3bef2aeec16a40f2f075cafa167733f0a3e
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         USER_EMAIL: ${{ secrets.EMAIL }}
