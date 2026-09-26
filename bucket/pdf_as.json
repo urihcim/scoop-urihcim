@@ -1,10 +1,10 @@
 {
-    "version": "1.65",
+    "version": "1.67",
     "description": "PDF manipulation tool",
     "homepage": "http://uchijyu.s601.xrea.com/wordpress/pdf_as/",
     "license": "Freeware",
-    "url": "https://dforest.watch.impress.co.jp/library/p/pdf_as/11126/pdfas165.zip",
-    "hash": "fa1d2b03bab76b75b6fbfc1eac2cf5194df93721edcff9fda4a812a531b86694",
+    "url": "https://dforest.watch.impress.co.jp/library/p/pdf_as/11126/pdfas167.zip",
+    "hash": "df03d63fb9d7eebe18150988e48c1bf86239da181e548d8cecb9049ed7b73211",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\pdf_as.ini\")) {",
         "@'",
