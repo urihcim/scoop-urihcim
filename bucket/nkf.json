@@ -7,11 +7,8 @@
     "hash": "67bd8b968824095815dc5ba593dc0d3bc56d9ba108d008005cd60e2eb7dffd8e",
     "pre_install": "Remove-Item \"$dir\\linux\" -Recurse",
     "bin": "win\\nkf.exe",
-    "checkver": {
-        "github": "https://github.com/kkato233/nkf",
-        "regex": "/releases/tag/v(?<version>[\\d.A-Z-]+)\".*nkf (?<original>[\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/kkato233/nkf/releases/download/v$version/nkf-$matchOriginal.zip"
+        "url": "https://github.com/kkato233/nkf/releases/download/v$version/nkf-$version.zip"
     }
 }

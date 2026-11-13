@@ -32,7 +32,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/sakura-editor/sakura",
+        "github": "https://api.github.com/repos/sakura-editor/sakura/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
         "regex": "(?<file>sakura-tag-v(?<version>[\\d.]+)-[\\w-]*-Exe\\.zip)"
     },
     "autoupdate": {

@@ -27,8 +27,9 @@
         "config"
     ],
     "checkver": {
-        "github": "https://github.com/tablacus/TablacusExplorer",
-        "regex": "/(?<version>[\\d.]+)/(?<file>te(?<date>[\\d]+)\\.zip)"
+        "github": "https://api.github.com/repos/tablacus/TablacusExplorer/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "/(?<version>[\\d.]+)/(?<file>te\\d+\\.zip)"
     },
     "autoupdate": {
         "url": "https://github.com/tablacus/TablacusExplorer/releases/download/$version/$matchFile"
