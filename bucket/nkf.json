@@ -1,10 +1,10 @@
 {
-    "version": "2.1.5.1-2B",
+    "version": "2.1.5.1-3",
     "description": "Network Kanji Filter",
     "homepage": "https://github.com/kkato233/nkf",
     "license": "zlib",
-    "url": "https://github.com/kkato233/nkf/releases/download/v2.1.5.1-2B/nkf-2.1.5.1.zip",
-    "hash": "67bd8b968824095815dc5ba593dc0d3bc56d9ba108d008005cd60e2eb7dffd8e",
+    "url": "https://github.com/kkato233/nkf/releases/download/v2.1.5.1-3/nkf-2.1.5.1-3.zip",
+    "hash": "0ab4c0c27936b4bf5236606b65fc6794a82713e718524a22aa087ae028b1fb16",
     "pre_install": "Remove-Item \"$dir\\linux\" -Recurse",
     "bin": "win\\nkf.exe",
     "checkver": "github",
